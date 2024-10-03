@@ -4,7 +4,7 @@ use Moose::Role;
 use Valiant::HTML::Util::Form;
 use Valiant::HTML::Util::Pager;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 eval $VERSION;
 
 # https://metacpan.org/pod/Valiant::HTML::Util::TagBuilder
@@ -107,7 +107,10 @@ Declare a view in your Catalyst application:
 
 Produces the following output:
 
-  <p>Hello Perl Hacker!</p>
+    <form accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" method="post">
+      <input id="person_name" name="person.name" type="text" value=""/>
+      <input id="person_age" name="person.age" type="text" value=""/>
+    </form>
 
 =head1 DESCRIPTION
 
